@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+span {
+    color: #644FE0;
+}
+
+
+body {
+    
+    background: white url(assets/background_useall.png) center center no-repeat fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+div#imagem {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+div#dados {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    background-color: rgb(255, 251, 251);
+    width: 553px;
+    height: 802px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 30px rgb(193, 192, 199);
+}
+
+.cad{
+    text-align: left;
+}
+form {
+    width: 500px;
+    margin: 40px;
+    /*para ficar um input em cima do outro*/
+    margin-bottom: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#tipopessoa {
+    display: block;
+    margin-top: 10px;
+    /*para ter um espaçamento entre eles*/
+    width: 52%;
+    color: rgb(65, 65, 65);
+    height: 30px;
+    outline: none;
+    padding-left: 8px;
+    background: #FAFAFC;
+    border: 1px solid #66666C;
+    border-radius: 8px;
+}
+
+input {
+    display: block;
+    margin-top: 10px;
+    /*para ter um espaçamento entre eles*/
+    width: 50%;
+    color: rgb(65, 65, 65);
+    height: 28px;
+    outline: none;
+    padding-left: 8px;
+    background: #FAFAFC;
+    border: 1px solid #66666C;
+    border-radius: 8px;
+}
+
+input::placeholder {
+    color: rgb(65, 65, 65);
+    font-size: 13px;
+}
+
+label{
+    font-size: 15px;
+    text-align: right;
+    font-weight: bold;
+}

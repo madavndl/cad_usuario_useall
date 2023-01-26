@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/icon_useall.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <title>Cadastro</title>
+
+</head>
+
+<body>
+    <div id="dados">
+
+        <h1>Registro de <span>Usuário</span></h1>
+        <p>Faça seu cadastro para conseguir <br> fazer o login e ter acesso a sua UC</p>
+
+        <section class="cad">
+            <form action="post">
+
+                <label for="name">Nome</label>
+                <input id="name" type="text" name="name" placeholder="Digite seu nome completo" autofocus>
+
+                <label for="tipopessoa">Tipo Pessoa</label>
+                <select name="tipopessoa" id="tipopessoa">
+                    <option value="fisica">Pessoa Física</option>
+                    <option value="juridica">Pessoa Jurídica</option>
+                </select>
+
+                <label for="cpfcnpj">CPF/CNPJ</label>
+                <input class="cpfcnpj" id="cpfcnpj" type="text" name="cpfcnpj" placeholder="CPF/CNPJ" autofocus
+                    autocomplete="off">
+                <script type="text/javascript">
+                    var options = {
+                        onKeyPress: function (cpf, ev, el, op) {
+                            var masks = ['000.000.000-000', '00.000.000/0000-00'];
+                            $('.cpfcnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+                        }
+                    }
+                    $('.cpfcnpj').length > 11 ? $('.cpfcnpj').mask('00.000.000/0000-00', options) : $('.cpfcnpj').mask('000.000.000-00#', options);
+                </script>
+
+                <label for="email">E-mail</label>
+                <input id="email" type="text" name="email" placeholder="Digite seu e-mail">
+
+                <label for="confirmeemail">Confirme o E-mail</label>
+                <input id="confimeemail" type="text" name="confimeemail" placeholder="Digite novamente seu e-mail">
+            </form>
+        </section>
+    </div>
+    <div id="imagem"><img src="assets/logo_useall.png" alt="Logo da useall"></div>
+</body>
+
+</html>
