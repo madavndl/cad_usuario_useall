@@ -13,26 +13,25 @@ span {
 
 
 body {
-
+    height: 130vh;
     background: white url(assets/background_useall.png) center center no-repeat fixed;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    
 }
+
+
 
 div#imagem {
     position: absolute;
-    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 10px;
-    width: 259px;
-    height: 79px;
-
-
 }
 
-img div#dados {
+
+div#dados {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -43,10 +42,12 @@ img div#dados {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 0px 30px rgb(193, 192, 199);
+    
+    
 }
 
 .cad {
-    text-align: left;
+    text-align:left;
 }
 
 form {
@@ -54,6 +55,9 @@ form {
     margin: 40px;
     /*para ficar um input em cima do outro*/
     margin-bottom: 0px;
+    
+    
+    
 }
 
 li {
@@ -62,7 +66,8 @@ li {
 
 #tipopessoa {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     /*para ter um espaçamento entre eles*/
     width: 52%;
     color: rgb(65, 65, 65);
@@ -72,20 +77,24 @@ li {
     background: #FAFAFC;
     border: 1px solid #66666C;
     border-radius: 8px;
+   
 }
 
 input {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-right: 0px;
     /*para ter um espaçamento entre eles*/
     width: 50%;
     color: rgb(65, 65, 65);
     height: 28px;
     outline: none;
-    padding-left: 8px;
     background: #FAFAFC;
     border: 1px solid #66666C;
     border-radius: 8px;
+    
+    
 }
 
 input::placeholder {
@@ -97,6 +106,7 @@ label {
     font-size: 15px;
     text-align: right;
     font-weight: bold;
+    
 }
 
 button {

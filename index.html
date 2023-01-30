@@ -9,12 +9,10 @@
     <link rel="icon" href="assets/icon_useall.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <title>Cadastro</title>
 
 </head>
-
 <body>
     <div id="dados">
 
@@ -33,10 +31,10 @@
                     <option value="juridica">Pessoa Jurídica</option>
                 </select>
 
-                <label for="cpfcnpj">CPF/CNPJ</label>
-                <input class="cpfcnpj" id="cpfcnpj" type="text" name="cpfcnpj" placeholder="CPF/CNPJ" autofocus
+                <label for="cpfcnpj"> <b>CPF/CNPJ</b> </label>
+                <input class="cpfcnpj" id="cpfcnpj" type="text" name="cpfcnpj" placeholder="CPF/CNPJ"
                     autocomplete="off">
-                <script>
+                <script type="text/javascript">
                     var options = {
                         onKeyPress: function (cpf, ev, el, op) {
                             var masks = ['000.000.000-000', '00.000.000/0000-00'];
@@ -53,10 +51,10 @@
                         var forma = /\S+@\S+\.\S+/;
                         return forma.test(email);
                     }
-                    console.log(validarEmail('texto@texto.com')); // true
-                    console.log(validarEmail('texto@texto')); // false
-                    console.log(validarEmail('texto.com')); // false
-                    console.log(validarEmail('texto')); // false
+                    console.log(validarEmail('texto@texto.com')); // verdadeiro
+                    console.log(validarEmail('texto@texto')); // falso
+                    console.log(validarEmail('texto.com')); // falso
+                    console.log(validarEmail('texto')); // falso
                 </script>
 
                 <label for="senha">Senha</label>
@@ -76,13 +74,10 @@
                         }
                     }
                 </script>
-
                 <button type="submit" onclick="return validarSenha()"> EFETUAR CADASTRO</button>
-
             </form>
         </section>
     </div>
     <div id="imagem"><img src="assets/logo_useall.png" alt="Logo da useall"></div>
 </body>
-
 </html>
