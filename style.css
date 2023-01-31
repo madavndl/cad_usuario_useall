@@ -23,14 +23,14 @@ div#imagem {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 30px;
+    margin-top: 90px;
 }
 
 div#dados {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 10px;
+    top: 50px;
     background-color: rgb(255, 251, 251);
     width: 553px;
     height: 650px;
