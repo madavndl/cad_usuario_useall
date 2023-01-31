@@ -11,43 +11,32 @@ span {
     color: #644FE0;
 }
 
-
 body {
-    height: 130vh;
+    height: 80vh;
     background: white url(assets/background_useall.png) center center no-repeat fixed;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    
 }
-
-
 
 div#imagem {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
-
 div#dados {
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     top: 10px;
     background-color: rgb(255, 251, 251);
     width: 553px;
-    height: 802px;
+    height: 650px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 0px 30px rgb(193, 192, 199);
-    
-    
-}
-
-.cad {
-    text-align:left;
 }
 
 form {
@@ -55,46 +44,36 @@ form {
     margin: 40px;
     /*para ficar um input em cima do outro*/
     margin-bottom: 0px;
-    
-    
-    
-}
-
-li {
-    list-style-type: none;
 }
 
 #tipopessoa {
-    display: block;
     margin-top: 5px;
     margin-bottom: 15px;
     /*para ter um espaçamento entre eles*/
-    width: 52%;
+    width: 61.5%;
     color: rgb(65, 65, 65);
-    height: 30px;
+    height: 30.5px;
     outline: none;
     padding-left: 8px;
     background: #FAFAFC;
     border: 1px solid #66666C;
     border-radius: 8px;
-   
+    padding-left: 0px; 
 }
 
 input {
-    display: block;
+   position: relative;
     margin-bottom: 15px;
     margin-top: 5px;
     margin-right: 0px;
     /*para ter um espaçamento entre eles*/
-    width: 50%;
+    width: 60%;
     color: rgb(65, 65, 65);
     height: 28px;
     outline: none;
     background: #FAFAFC;
     border: 1px solid #66666C;
-    border-radius: 8px;
-    
-    
+    border-radius: 8px;    
 }
 
 input::placeholder {
@@ -103,22 +82,35 @@ input::placeholder {
 }
 
 label {
-    font-size: 15px;
-    text-align: right;
+    font-size: 14px;
     font-weight: bold;
-    
 }
 
 button {
-    display: block;
     margin-top: 30px;
     /*para ter um espaçamento entre eles*/
-    width: 52.5%;
+    width: 62%;
     color: rgb(255, 255, 255);
-    height: 30px;
+    height: 32px;
     outline: none;
-    padding-left: 8px;
-    background: #644FE0;
+    padding-left: 10px;
+    background: rgb(48, 46, 46);
     border: none;
-    border-radius: 7px;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #644FE0;
+}
+
+li {
+    list-style-type: none;
+}
+
+fieldset{
+    border:none;
+    text-align: right;
+    width: 340px;
 }

@@ -22,59 +22,73 @@
         <section class="cad">
             <form action="post">
 
-                <label for="name">Nome</label>
-                <input id="name" type="text" name="name" placeholder="Digite seu nome completo" autofocus>
+                    <fieldset>
 
-                <label for="tipopessoa">Tipo Pessoa</label>
-                <select name="tipopessoa" id="tipopessoa">
-                    <option value="fisica">Pessoa Física</option>
-                    <option value="juridica">Pessoa Jurídica</option>
-                </select>
+                        <li>
+                            <label for="name">Nome</label>
+                            <input id="name" type="text" name="name" placeholder="Digite seu nome completo" autofocus autocomplete="off">
+                        </li>
+                        
+                        <li>
+                            <label for="tipopessoa">Tipo Pessoa</label>
+                            <select name="tipopessoa" id="tipopessoa">
+                                <option value="fisica">Pessoa Física</option>
+                                <option value="juridica">Pessoa Jurídica</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="cpfcnpj"> <b>CPF/CNPJ</b> </label>
+                            <input class="cpfcnpj" id="cpfcnpj" type="text" name="cpfcnpj" placeholder="CPF/CNPJ"
+                                autocomplete="off">
+                            <script type="text/javascript">
+                                var options = {
+                                    onKeyPress: function (cpf, ev, el, op) {
+                                        var masks = ['000.000.000-000', '00.000.000/0000-00'];
+                                        $('.cpfcnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+                                    }
+                                }
+                                $('.cpfcnpj').length > 11 ? $('.cpfcnpj').mask('00.000.000/0000-00', options) : $('.cpfcnpj').mask('000.000.000-00#', options);
+                            </script>
+                        </li>
+                        <li>
+                            <label for="email">E-mail</label>
+                            <input required="" id="email" type="text" name="email" placeholder="Digite seu e-mail">
+                            <script>
+                                function validarEmail(email) {
+                                    var forma = /\S+@\S+\.\S+/;
+                                    return forma.test(email);
+                                }
+                                console.log(validarEmail('texto@texto.com')); // verdadeiro
+                                console.log(validarEmail('texto@texto')); // falso
+                                console.log(validarEmail('texto.com')); // falso
+                                console.log(validarEmail('texto')); // falso
+                            </script>
+                        </li>
+                        <li>
+                            <label for="senha">Senha</label>
+                            <input required="" id="senha" type="password" name="senha" placeholder="Digite sua senha">
+                        </li>
+                        
+                        <li>
+                            <label for="senhaC">Confirme sua Senha</label>
+                            <input required="" id="senhaC" type="password" name="senhaC" placeholder="Confirme sua senha">
+                            <script>
+                                function validarSenha() {
+                                    senha = document.getElementsByName('senha').value;
+                                    senhaC = document.getElementsByName('senhaC').value;
+                                    if (senha != senhaC) {
+                                        senhaC.setCustomValidity("Senhas diferentes!");
+                                        return false;
+                                    } else {
+                                        return true;
+                                    }
+                                }
+                            </script>
+                        </li>
+                        <li><button type="submit" onclick="return validarSenha()"> EFETUAR CADASTRO</button></li>
 
-                <label for="cpfcnpj"> <b>CPF/CNPJ</b> </label>
-                <input class="cpfcnpj" id="cpfcnpj" type="text" name="cpfcnpj" placeholder="CPF/CNPJ"
-                    autocomplete="off">
-                <script type="text/javascript">
-                    var options = {
-                        onKeyPress: function (cpf, ev, el, op) {
-                            var masks = ['000.000.000-000', '00.000.000/0000-00'];
-                            $('.cpfcnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
-                        }
-                    }
-                    $('.cpfcnpj').length > 11 ? $('.cpfcnpj').mask('00.000.000/0000-00', options) : $('.cpfcnpj').mask('000.000.000-00#', options);
-                </script>
-
-                <label for="email">E-mail</label>
-                <input required="" id="email" type="text" name="email" placeholder="Digite seu e-mail">
-                <script>
-                    function validarEmail(email) {
-                        var forma = /\S+@\S+\.\S+/;
-                        return forma.test(email);
-                    }
-                    console.log(validarEmail('texto@texto.com')); // verdadeiro
-                    console.log(validarEmail('texto@texto')); // falso
-                    console.log(validarEmail('texto.com')); // falso
-                    console.log(validarEmail('texto')); // falso
-                </script>
-
-                <label for="senha">Senha</label>
-                <input required="" id="senha" type="password" name="senha" placeholder="Digite sua senha">
-                <label for="senhaC">Confirme sua Senha</label>
-                <input required="" id="senhaC" type="password" name="senhaC" placeholder="Confirme sua senha">
-                <script>
-                    function validarSenha() {
-                        senha = document.getElementsByName('senha').value;
-                        senhaC = document.getElementsByName('senhaC').value;
-
-                        if (senha != senhaC) {
-                            senhaC.setCustomValidity("Senhas diferentes!");
-                            return false;
-                        } else {
-                            return true;
-                        }
-                    }
-                </script>
-                <button type="submit" onclick="return validarSenha()"> EFETUAR CADASTRO</button>
+                    </fieldset>
+                    
             </form>
         </section>
     </div>
